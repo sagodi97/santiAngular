@@ -5,5 +5,6 @@ export interface SantiSubjects {
     type: string,
     teacher: string,
     semester:string,
-    image: string
+    image: string,
+    showMe:boolean;
 }
