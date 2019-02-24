@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { SantiSubjects } from '../santi-subjects';
 
 @Component({
   selector: 'app-santi-card',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SantiCardComponent implements OnInit {
 
-  @Input('data') data: any;
+  @Input('data') data: SantiSubjects;
   constructor() { }
 
   ngOnInit() {
