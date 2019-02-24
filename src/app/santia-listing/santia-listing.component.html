@@ -1,0 +1,21 @@
+<div id="subjects" ng>
+  <div class="row">
+    <div *ngFor="let data of santaData" class="col-md-4">
+        <div class="card">
+          <img src="../../assets/images/{{ data.image }}" class="card-img-top img-fluid" alt="data.code">
+          <div class="card-body">
+            <h5 class="card-title">{{ data.name }}</h5>
+            <h4>
+              <i class="fas fa-bookmark"></i>
+              <span class="label label-primary"> {{ data.code }} </span>
+            </h4>
+            <button class="btn btn-sm btn-success" (click)="data.showMe = !data.showMe">
+            Details
+            </button>
+            <div class="container" *ngIf="data.showMe">
+                
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
