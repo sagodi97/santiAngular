@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {santaData} from '../../data/santaData';
+import { HttpClient} from '@angular/common/http';
+
+import { SantiService } from '../services/santi.service';
+
+
 
 @Component({
   selector: 'app-santia-listing',
@@ -8,10 +12,19 @@ import {santaData} from '../../data/santaData';
 })
 export class SantiaListingComponent implements OnInit {
 
-  santaData: Array<any> = santaData;
-  constructor() { }
+  subjects:Object;
+  error: string;
+
+  constructor(private  http:HttpClient, private santiService:SantiService) { }
 
   ngOnInit() {
-  }
+    this.santiService.getSubjects()
+    .subscribe(
+      data => this.subjects = data, 
+      error => this.error = error.statusText
+    );
+    
+    
+  };  
 
 }

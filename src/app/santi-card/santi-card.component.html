@@ -8,7 +8,7 @@
     </div>
     <br>
     <div class="card-body">
-      <h4 class="card-title"><span class="label label-primary"> {{ data.code }} </span><i class="fas fa-bookmark"></i></h4>
+      <h4 class="card-title"><i class="fas fa-bookmark"></i><span class="label label-primary"> {{ data.code }} </span></h4>
       <br>
       <button
         *ngIf="!data.showMe"
@@ -27,7 +27,10 @@
           <ul>
             <li><strong>Name: </strong> {{ data.name }}</li>
             <li><strong>Teacher: </strong> {{ data.teacher }}</li>
-            <li><strong>Mark: </strong> {{ data.mark }}</li>
+            <li><strong>Mark: </strong> {{ data.mark.$numberDecimal }} 
+              <span *ngIf="data.mark.$numberDecimal < 3">😨</span>
+              <span *ngIf="data.mark.$numberDecimal == 3">😬</span>
+              <span *ngIf="data.mark.$numberDecimal > 3">😎</span></li>
             <li><strong>Type: </strong> {{ data.type }}</li>
             <li><strong>Semester: </strong> {{ data.semester }}</li>
           </ul>
