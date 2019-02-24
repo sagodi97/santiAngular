@@ -3,15 +3,3 @@
     text-align: center;
 }
 
-.img-fluid {
-    margin: 0 auto;
-    padding: 15px;
-    max-width: 70%;
-    max-height: auto;
-}
-
-.card-img-top {
-    width: 100%;
-    height: auto;
-
-}

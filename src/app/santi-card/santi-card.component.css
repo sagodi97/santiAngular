@@ -1,0 +1,33 @@
+.img-fluid {
+    margin: 0 auto;
+    padding: 15px;
+    max-width: 70%;
+    max-height: auto;
+}
+
+.image{
+    position:relative;
+    overflow:hidden;
+}
+
+.card-img-top {
+    width: 50%;
+    height: auto;
+    position: relative;
+    margin: 13%;
+
+}
+
+.btn{
+    margin: 10%;
+}
+
+.card{
+    margin: 5%;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.details{
+    text-align: left;
+}
